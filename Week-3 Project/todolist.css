@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+#task-form {
+    margin-bottom: 20px;
+}
+
+#task-input {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#add-task-btn {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#add-task-btn:hover {
+    background-color: #3e8e41;
+}
+
+#task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#task-list li {
+    padding: 10px;
+    border-bottom: 1px solid #1c1b1b;
+    position: relative;
+}
+
+#task-list li:last-child {
+    border-bottom: none;
+}
+
+#task-list li.completed {
+    text-decoration: line-through;
+    color: #999;
+    animation: completed-task 0.5s forwards;
+}
+
+#task-list li.delete {
+    animation: delete-task 0.5s forwards;
+}
+
+@keyframes completed-task {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0.5;
+        transform: scale(0.9);
+    }
+}
+
+@keyframes delete-task {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+#task-list li button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff0000;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#task-list li button:hover {
+    background-color: #ff7f93;
+}
+
+#clear-completed-btn {
+    background-color: #ffb269;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#clear-completed-btn:hover {
+    background-color: #ff7f93;
+}
+
+.todolist{
+    text-align: center;
+    margin-top: 200px;
+}
+
+#tasks-remaining, #tasks-completed {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+#filter-label {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+#filter-select {
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 16px;
+}
